@@ -17,9 +17,9 @@ class program {
         }
     }
 
-    void dejar_todo(pasos,cuantos){
+    void dejar_todo(pasos){
         iterate(pasos){
-            iterate(cuantos){
+            iterate(3){
                 if (anyBeepersInBeeperBag){
                     putbeeper();
                 }
