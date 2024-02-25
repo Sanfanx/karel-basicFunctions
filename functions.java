@@ -5,6 +5,12 @@ class program {
         }
     }
 
+    void espejo() {
+        iterate (2){
+            turnleft();
+        }
+    }
+
     void recoger_todo(pasos){
         iterate(pasos){
             while(nextToABeeper()) {
@@ -109,6 +115,39 @@ class program {
         turnleft();
         turnleft();
         move();
+    }
+    void meterse_a_caja(){
+        if(frontIsBlocked()) {
+            turnleft();
+        }
+        else
+        {
+            while(frontIsClear()) {
+                move();    
+            }
+            turnleft();
+        }
+        
+        while(rightIsBlocked()) {
+            move();
+           
+        }
+        
+        iterate(3) turnleft();
+        move();
+        
+        while(rightIsBlocked()) {
+            move();
+        }
+        
+        iterate(3) turnleft();
+        move();
+        iterate(3) turnleft();
+        
+        while(frontIsClear()) {
+            move();
+        }
+        
     }
     program () {
         //CODIGOOOOOO :D
